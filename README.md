@@ -30,12 +30,37 @@ Welcome to the **Ice Cream Parlor** – a full-stack web application built using
 ## 🔧 Setup Instructions
 
 Follow these steps to run the project locally:
-
-# Add your MONGODB connection string in the Config folder db.js file
+Add your MONGODB connection string in the Config folder db.js file
 
 ### 1. Clone the Repo
 
 ```bash
 git clone https://github.com/yourusername/ice-cream-parlor.git
 cd ice-cream-parlor
+```
+### 2. Install Dependencies
 
+```bash
+cd backend
+npm install
+```
+```bash
+cd ../frontend
+npm install
+```
+### 3. MongoDB Configuration (IMP)
+```bash
+// backend/config/config.js
+export const MONGO_URI = "your-mongodb-connection-string";
+```
+Note: Never share your connection string publicly. Use environment variables or .env in production.
+
+### 4. Run the Application
+```bash
+cd backend
+npm run server
+```
+```bash
+cd ../frontend
+npm start
+```
